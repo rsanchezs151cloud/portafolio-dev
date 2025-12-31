@@ -1,0 +1,130 @@
+.header {
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+
+    transition:
+        background-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===============================
+   Header flotante elegante
+=============================== */
+.header.fixed {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+
+    width: 95%;
+    max-width: 1200px;
+
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+
+    padding: 18px 20px;
+    z-index: 1000;
+
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+    animation: headerFloatIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes headerFloatIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-6px);
+    }
+}
+
+/* ===============================
+   Contenido interno
+=============================== */
+.header-inner {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+    align-items: center;
+}
+
+/* ===============================
+   Logo
+=============================== */
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.logo .titulo {
+    font-size: 34px;
+    font-family: 'Merriweather', serif;
+}
+
+.logo .subtitulo {
+    font-size: 16px;
+    color: var(--primario);
+}
+
+/* ===============================
+   Navbar
+=============================== */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    position: relative;
+    padding-bottom: 6px;
+    font-weight: 500;
+}
+
+/* Subrayado animado */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primario);
+
+    transition:
+        width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* ===============================
+   Responsive
+=============================== */
+@media (max-width: 768px) {
+    .header-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .navbar {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}

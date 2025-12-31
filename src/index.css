@@ -1,0 +1,178 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--shade-1: #f2f2f2;
+	--shade-2: #d9d9d9;
+	--shade-3: #bfbfbf;
+	--shade-4: #a6a6a6;
+	--shade-5: #8c8c8c;
+	--shade-6: #737373;
+	--shade-7: #595959;
+	--shade-8: #404040;
+	--shade-9: #0d0d0d;
+	--shade-10: #000000;
+	--primario: #d83a3a;
+	--primario-hover: #bf3030;
+}
+
+body {
+	font-family: 'Inter', serif;
+	background: var(--shade-1);
+	color: var(--shade-9);
+	&.dark {
+		background: var(--shade-9);
+		color: var(--shade-4);
+	}
+}
+
+a {
+	text-decoration: none;
+	color: var(--shade-8);
+	font-weight: 500;
+	&:hover {
+		text-decoration: underline;
+	}
+
+	.dark & {
+		color: var(--shade-4);
+	}
+}
+
+.contenedor {
+	width: 95%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.boton {
+	background: var(--primario);
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	border-radius: 100px;
+	font-weight: 500;
+	padding: 14px 20px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	transition: 0.3s ease all;
+	text-decoration: none;
+	&:hover {
+		background: var(--primario-hover);
+		text-decoration: none;
+	}
+
+	.dark & {
+		color: #fff;
+	}
+}
+
+.clientes,
+.trabajos,
+.contacto,
+.footer {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	align-items: center;
+	padding: 60px 20px;
+
+	.encabezado {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		align-items: center;
+
+		.titulo {
+			font-family: 'Merriweather', serif;
+			color: var(--shade-8);
+			font-size: 22px;
+			font-weight: 700;
+
+			.dark & {
+				color: var(--shade-2);
+			}
+		}
+
+		.subtitulo {
+			font-size: 16px;
+			color: var(--shade-6);
+			.dark & {
+				color: var(--shade-4);
+			}
+		}
+	}
+}
+
+
+/* ===== FIX HEADER + SCROLL ===== */
+
+/* Evita que el header fijo tape los títulos */
+section {
+  scroll-margin-top: 140px;
+}
+
+/* Suaviza la transición del header al fijarse */
+.header {
+  transition: 
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* Aparición suave del header fijo */
+.header.fixed {
+  transform: translateY(0);
+}
+
+/* Estado inicial (antes de fijarse) */
+.header:not(.fixed) {
+  transform: translateY(0);
+}
+
+/* Subrayado animado del menú */
+.navbar a {
+  position: relative;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ===== Smooth transition al hacer click en menú ===== */
+
+.header {
+  transition:
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease,
+    padding 0.35s ease;
+}
+
+/* Mantiene altura estable */
+.header:not(.fixed),
+.header.fixed {
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,21 @@
+.clientes {
+	.logos {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: center;
+		object-fit: contain;
+		.logo {
+			border-radius: 5px;
+			max-width: 280px;
+			width: 100%;
+			background: white;
+			object-fit: contain;
+			@media screen and (max-width: 768px) {
+				& {
+					max-width: 130px;
+				}
+			}
+		}
+	}
+}
