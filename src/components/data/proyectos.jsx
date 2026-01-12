@@ -1,9 +1,9 @@
-const trabajos = [
+const proyectos = [
 	{
 		id: 1,
 		categoria: 'diseño-web',
 		thumb: {
-			url: './assets/trabajos/diseño-1.png',
+			url: './assets/proyectos/diseño-1.png',
 			alt: 'Trabajo 1',
 		},
 		info: {
@@ -17,7 +17,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/2.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -25,7 +25,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/3.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -40,7 +40,7 @@ const trabajos = [
 		id: 2,
 		categoria: 'desarrollo-web',
 		thumb: {
-			url: './assets/trabajos/desarrollo-1.png',
+			url: './assets/proyectos/desarrollo-1.png',
 			alt: 'Trabajo 2',
 		},
 		info: {
@@ -54,7 +54,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/4.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/4.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -62,7 +62,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/5.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/5.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -77,7 +77,7 @@ const trabajos = [
 		id: 3,
 		categoria: 'aplicaciones-moviles',
 		thumb: {
-			url: './assets/trabajos/apps-1.png',
+			url: './assets/proyectos/apps-1.png',
 			alt: 'Trabajo 3',
 		},
 		info: {
@@ -91,7 +91,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/2.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -99,7 +99,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/3.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -114,7 +114,7 @@ const trabajos = [
 		id: 4,
 		categoria: 'desarrollo-software',
 		thumb: {
-			url: './assets/trabajos/sofware-dev-1.png',
+			url: './assets/proyectos/sofware-dev-1.png',
 			alt: 'Trabajo 4',
 		},
 		info: {
@@ -128,7 +128,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/2.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -136,7 +136,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/3.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -151,7 +151,7 @@ const trabajos = [
 		id: 5,
 		categoria: 'diseño-web',
 		thumb: {
-			url: './assets/trabajos/diseño-2.png',
+			url: './assets/proyectos/diseño-2.png',
 			alt: 'Trabajo 5',
 		},
 		info: {
@@ -165,7 +165,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/2.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -173,7 +173,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/3.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -188,7 +188,7 @@ const trabajos = [
 		id: 6,
 		categoria: 'desarrollo-web',
 		thumb: {
-			url: './assets/trabajos/desarrollo-2.png',
+			url: './assets/proyectos/desarrollo-2.png',
 			alt: 'Trabajo 6',
 		},
 		info: {
@@ -202,7 +202,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/2.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -210,7 +210,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/3.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -225,7 +225,7 @@ const trabajos = [
 		id: 7,
 		categoria: 'aplicaciones-moviles',
 		thumb: {
-			url: './assets/trabajos/apps-2.png',
+			url: './assets/proyectos/apps-2.png',
 			alt: 'Trabajo 7',
 		},
 		info: {
@@ -239,7 +239,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/2.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -247,7 +247,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/3.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -262,7 +262,7 @@ const trabajos = [
 		id: 8,
 		categoria: 'desarrollo-software',
 		thumb: {
-			url: './assets/trabajos/sofware-dev-2.png',
+			url: './assets/proyectos/sofware-dev-2.png',
 			alt: 'Trabajo 8',
 		},
 		info: {
@@ -276,7 +276,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/2.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -284,7 +284,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/3.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -299,7 +299,7 @@ const trabajos = [
 		id: 9,
 		categoria: 'diseño-web',
 		thumb: {
-			url: './assets/trabajos/diseño-3.png',
+			url: './assets/proyectos/diseño-3.png',
 			alt: 'Trabajo 9',
 		},
 		info: {
@@ -313,7 +313,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/2.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -321,7 +321,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/3.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -336,7 +336,7 @@ const trabajos = [
 		id: 10,
 		categoria: 'desarrollo-web',
 		thumb: {
-			url: './assets/trabajos/desarrollo-3.png',
+			url: './assets/proyectos/desarrollo-3.png',
 			alt: 'Trabajo 10',
 		},
 		info: {
@@ -350,7 +350,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/2.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -358,7 +358,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/3.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -373,7 +373,7 @@ const trabajos = [
 		id: 11,
 		categoria: 'aplicaciones-moviles',
 		thumb: {
-			url: './assets/trabajos/apps-3.png',
+			url: './assets/proyectos/apps-3.png',
 			alt: 'Trabajo 11',
 		},
 		info: {
@@ -387,7 +387,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/2.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -395,7 +395,7 @@ const trabajos = [
 						officiis provident?
 					</p>
 
-					<img loading="lazy" src="./assets/trabajos/3.png" alt="" />
+					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
 
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
@@ -410,7 +410,7 @@ const trabajos = [
 		id: 12,
 		categoria: 'desarrollo-software',
 		thumb: {
-			url: './assets/trabajos/sofware-dev-3.png',
+			url: './assets/proyectos/sofware-dev-3.png',
 			alt: 'Trabajo 12',
 		},
 		info: {
@@ -429,4 +429,4 @@ const trabajos = [
 	},
 ];
 
-export default trabajos;
+export default proyectos;

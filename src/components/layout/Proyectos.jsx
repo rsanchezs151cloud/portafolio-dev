@@ -1,27 +1,27 @@
-import './Trabajos.css';
+import './Proyectos.css';
 import Modal from '../Modal';
-import trabajos from '../data/trabajos';
+import proyectos from '../data/proyectos';
 import { useState } from 'react';
 
-const Trabajos = () => {
+const Proyectos = () => {
 	const [categoriaSelecionada, setCategoriaSelecionada] = useState('todos');
-	const [trabajosFiltrados, setTrabajosFiltrados] = useState(trabajos);
+	const [proyectosFiltrados, setProyectosFiltrados] = useState(proyectos);
 	const [estadoModal, setEstadoModal] = useState(false);
-	const [trabajoSelecionado, setTrabajoSelecionado] = useState(trabajos[0]);
+	const [proyectoSelecionado, setProyectoSelecionado] = useState(proyectos[0]);
 
 	const handleChange = (e) => {
 		const categoria = e.target.id;
 		setCategoriaSelecionada(categoria);
 
 		if (categoria === 'todos') {
-			setTrabajosFiltrados(trabajos);
+			setProyectosFiltrados(proyectos);
 		} else {
-			const nuevosTrabajos = trabajos.filter((trabajo) => {
-				if (trabajo.categoria === categoria) {
+			const nuevosProyecto = proyectos.filter((proyecto) => {
+				if (proyecto.categoria === categoria) {
 					return true;
 				}
 			});
-			setTrabajosFiltrados(nuevosTrabajos);
+			setProyectosFiltrados(nuevosProyecto);
 		}
 	};
 
@@ -29,13 +29,13 @@ const Trabajos = () => {
 		e.preventDefault();
 		setEstadoModal(true);
 		document.body.style.overflow = 'hidden';
-		const trabajo = trabajos.find((trabajo) => {
-			if (trabajo.id === id) {
+		const proyecto = proyectos.find((proyecto) => {
+			if (proyecto.id === id) {
 				return true;
 			}
 		});
 
-		setTrabajoSelecionado(trabajo);
+		setProyectoSelecionado(proyecto);
 	};
 
 	const closeModal = () => {
@@ -45,9 +45,9 @@ const Trabajos = () => {
 
 	return (
 		<>
-			<section className="trabajos" id="trabajos">
+			<section className="proyectos" id="proyectos">
 				<div className="encabezado">
-					<h3 className="titulo">Mis trabajos</h3>
+					<h3 className="titulo">Mis proyectos</h3>
 					<p className="subtitulo">Estos son mis trabajos como freelance.</p>
 				</div>
 				<div className="filtros">
@@ -103,20 +103,20 @@ const Trabajos = () => {
 					</label>
 				</div>
 				<div className="grid">
-					{trabajosFiltrados.map((trabajo, index) => {
+					{proyectosFiltrados.map((proyecto, index) => {
 						return (
-							<div className="trabajo" key={trabajo.id}>
-								<a href="#" className="thumb" onClick={(e) => openModal(e, trabajo.id)}>
-									<img loading="lazy" src={trabajo.thumb.url} alt={trabajo.thumb.alt} />
+							<div className="proyectos" key={proyecto.id}>
+								<a href="#" className="thumb" onClick={(e) => openModal(e, proyecto.id)}>
+									<img loading="lazy" src={proyecto.thumb.url} alt={proyecto.thumb.alt} />
 								</a>
 								<div className="info">
 									<div className="textos">
-										<a href="#" className="nombre" onClick={(e) => openModal(e, trabajo.id)}>
-											{trabajo.info.nombre}
+										<a href="#" className="nombre" onClick={(e) => openModal(e, proyecto.id)}>
+											{proyecto.info.nombre}
 										</a>
-										<p className="categoria">{trabajo.info.categoria}</p>
+										<p className="categoria">{proyecto.info.categoria}</p>
 									</div>
-									<a href="#" className="btn-ir" onClick={(e) => openModal(e, trabajo.id)}>
+									<a href="#" className="btn-ir" onClick={(e) => openModal(e, proyecto.id)}>
 										<svg xmlns="http://www.w3.org/2000/svg" width="16" fill="currentColor" viewBox="0 0 16 16">
 											<path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z" />
 										</svg>
@@ -128,9 +128,9 @@ const Trabajos = () => {
 				</div>
 			</section>
 
-			{estadoModal && <Modal closeModal={closeModal} trabajo={trabajoSelecionado} />}
+			{estadoModal && <Modal closeModal={closeModal} trabajo={proyectoSelecionado} />}
 		</>
 	);
 };
 
-export default Trabajos;
+export default Proyectos;

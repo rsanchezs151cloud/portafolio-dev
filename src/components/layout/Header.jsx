@@ -11,11 +11,11 @@ const Header = () => {
        Sticky header suave
     =============================== */
     useEffect(() => {
-        const clientes = document.getElementById('clientes');
-        if (!clientes) return;
+        const trabajos = document.getElementById('clientes');
+        if (!trabajos) return;
 
         const onScroll = () => {
-            const trigger = clientes.offsetTop - 140;
+            const trigger = trabajos.offsetTop - 160;
             setIsFixed(window.scrollY >= trigger);
         };
 
@@ -77,11 +77,18 @@ const Header = () => {
         >
             <div className="header-inner">
                 <div className="logo">
-                    <h2 className="titulo">Carlos Arturo</h2>
-                    <p className="subtitulo">Desarrollador Web & Freelance</p>
+                    <h2 className="titulo">Roberto C. Sánchez</h2>
+                    <p className="subtitulo">Lider de proyectos, Desarrollador Fullstack & Freelance</p>
                 </div>
 
                 <nav className="navbar">
+                    <a
+                        href="#hero"
+                        onClick={handleNavClick}
+                        className={active === 'hero' ? 'active' : ''}
+                    >
+                        inicio
+                    </a>
                     <a
                         href="#clientes"
                         onClick={handleNavClick}
@@ -89,12 +96,12 @@ const Header = () => {
                     >
                         Clientes
                     </a>
-                    <a
-                        href="#trabajos"
+                     <a
+                        href="#proyectos"
                         onClick={handleNavClick}
-                        className={active === 'trabajos' ? 'active' : ''}
+                        className={active === 'proyectos' ? 'active' : ''}
                     >
-                        Trabajos
+                        Proyectos
                     </a>
                     <a
                         href="#acerca-de"
