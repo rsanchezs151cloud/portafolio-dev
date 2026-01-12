@@ -1,0 +1,633 @@
+  
+body, html {
+    height: 100%;
+    margin: 0;
+    font: sans-serif;
+    color: #777;
+  }
+  
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+    position: relative;
+    opacity: 0.80;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  .bgimg-1 {
+    background-image: url("/site/img/headerFondoBackground1.png");
+    min-height: 100%;
+  }
+  
+  .bgimg-2 {
+    background-image: url("/site/img/fondoconocimientos.jpg");
+    min-height: 400px;
+  }
+  
+  .bgimg-3 {
+    background-image: url("/site/img/fondoproyectos.jpg");
+    min-height: 400px;
+  }
+
+  .bgimg-4 {
+    background-image: url("/site/img/headerFondoBackground5.jpg");
+    min-height: 400px;
+  }
+
+  .bgimg-5 {
+    background-image: url("/site/img/headerFondoBackground4.jpg");
+    min-height: 400px;
+  }
+  
+  .caption {
+    position: absolute;
+    left: 0%;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  .caption img {
+    width: 280px; /* Ajusta el tamaño según lo necesario */
+    height: 280px; /* Asegúrate de que sea igual al ancho */
+    border-radius: 50%; /* Convierte la imagen en un círculo */
+    border: 2px solid #00294a; /* Borde con color */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 1); /* Sombra para darle un efecto moderno */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+  }
+  
+  .caption span.border {
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  
+  h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 18px, sans-serif;
+    color: #111;
+  }
+ /* Menú lateral flotante */
+.floating-sidebar {
+    position: fixed;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+    padding: 10px;
+    background-color: rgba(8, 8, 8, 0.5);
+    border: 1px solid #142b584d;
+    border-radius: 8px;
+  }
+  
+  .menu-container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: khaki;
+    font-size: 14px; /* Tamaño de la descripción */
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .menu-container a:hover {
+    transform: scale(1.1);
+    color: rgb(226, 255, 3); /* Color de hover */
+  }
+  
+  .menu-container a i {
+    font-size: 22px; /* Tamaño de los iconos */
+  }
+  
+  .menu-container a span {
+    font-size: 10px; /* Descripción más pequeña */
+    margin-top: 5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8); /* Texto sutil */
+  }
+  
+  /* Espacio para contenido principal */
+  #inicio, #proyectos, #conocimientos, #experiencia, #estudios, #contacto {
+    padding-top: 50px;
+  }
+  
+
+/* Estilo general para el contenedor de proyectos */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 50px;
+}
+
+/* Estilo para cada proyecto */
+.project {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabla dentro de cada proyecto */
+.project table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Títulos de los proyectos */
+.project h3 {
+    font-size: 14px;
+    margin: 15px 10px 5px;
+    color: #333;
+    text-align: center;
+}
+
+/* Imágenes de los proyectos */
+.project .rectangular-image {
+    width: 100%;
+    height: 180px;
+    display: block;
+    margin: 10px auto;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Descripciones de los proyectos */
+.project p {
+    font-size: 12px;
+    margin: 10px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Estilo para los textos en negritas */
+.project p b {
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+/* Efecto Parallax para la sección de proyectos */
+#proyectos-parallax {
+    background-image: url("/img/fondoproyectos.jpg"); /* Cambia esto a la imagen deseada */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+#proyectos-parallax h2 {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+
+.seccioninicio {
+    color: #282828;
+    background-color:#ddd;
+    text-align:center;
+    padding:30px 30px;
+    text-align: justify;
+}
+
+.seccionproyectos {
+    color: #777;
+    background-color:white;
+    text-align:center;
+    padding:30px 30px;
+    text-align: justify;
+}
+
+.seccionconocimientos {
+    color: #777;
+    background-color:white;
+    text-align:center;
+    padding:30px 30px;
+    text-align: justify;
+}
+
+.seccionexperiencia {
+    color: #777;
+    background-color:white;
+    text-align:center;
+    padding:30px 30px;
+    text-align: justify;
+}
+
+.seccionestudios {
+    color: #777;
+    background-color:white;
+    text-align:center;
+    padding:30px 30px;
+    text-align: justify;
+}
+
+.seccioncontacto {
+    color: #777;
+    background-color:white;
+    text-align:center;
+    padding:30px 30px;
+    text-align: justify;
+    height: 600px;
+}
+
+/* Contenedor general */
+.projects-knowledge {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background: linear-gradient(135deg, #f0f4f8, #e4e9f0);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    height: 400px;
+    overflow: auto;
+    width: 100%;
+}
+
+/* Estilo de cada tarjeta */
+.knowledge-card {
+  background: #ffffff; /* Fondo blanco para las tarjetas */
+  border: 1px solid #e0e0e0; /* Bordes grises claros */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 170px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #00294a; /* Texto en gris oscuro */
+}
+
+/* Estilo del texto en las tarjetas */
+.knowledge-card p {
+  font-size: 16px;
+  margin-top: 15px;
+  color: #00294a; /* Texto más claro para buen contraste */
+}
+
+/* Iconos */
+.knowledge-card i {
+  font-size: 28px;
+  color: #00294a; /* Color azul moderno para los iconos */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover en las tarjetas */
+.knowledge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el ratón */
+}
+
+.knowledge-card:hover i {
+  color: #00294a; /* Azul más intenso para el icono al pasar el ratón */
+  transform: scale(1.5);
+}
+
+
+.projects-container, .experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project, .experience {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+}
+
+.project:hover, .experience:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project h3, .experience h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #4b79a1;
+}
+
+.project p, .experience p {
+    margin: 30px;
+    font-size: 11px;
+}
+
+.more-btn {
+    align-self: flex-start;
+    background-color: #050505;
+    color: #ffffff;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.more-btn:hover {
+    background-color: #174052;
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Por defecto oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 25px;
+    border-radius: 12px; /* Bordes más redondeados */
+    width: 90%;
+    max-width: 700px;
+    max-height: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más prominente */
+    position: relative;
+    overflow-y: auto; /* Scroll solo en el eje Y si el contenido excede */
+}
+
+/* Título del popup */
+.popup-content h3 {
+    color: #2c3e50; /* Color más oscuro */
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #1a3e5e; /* Línea decorativa */
+    padding-bottom: 10px;
+}
+
+/* Párrafos y lista */
+.popup-content p {
+    color: #444; /* Gris más claro */
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.popup-content ol {
+    list-style-type: none; /* Quita la numeración */
+    padding-left: 0; /* Elimina la indentación por defecto */
+    color: #00294a;
+    margin-left: 20px;
+    padding-left: 15px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.popup-content ol li {
+    margin-bottom: 10px; /* Espaciado entre los elementos */
+}
+
+.popup-content ol li::before {
+    content: "✔  "; /* Agrega un punto como marcador */
+    color: #1a3e5e; /* Color del marcador */
+    font-size: 13px; /* Ajusta el tamaño del marcador */
+    margin-right: 10px; /* Espaciado entre el marcador y el texto */
+}
+
+/* Botón de cerrar */
+.popup-content .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.popup-content .close:hover {
+    color: #e74c3c; /* Rojo al pasar el cursor */
+    transform: scale(1.2); /* Efecto de agrandamiento */
+}
+
+/* Efecto de animación del popup */
+.popup.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .popup-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .popup-content .close {
+        font-size: 1.5rem;
+    }
+}
+
+
+.education, .courses {
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+    padding: 5px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0px auto;
+    font-family: Arial, sans-serif;
+}
+
+.education h3, .courses h3 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1a3e5e;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.education p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #555;
+    margin: 10px 0;
+}
+
+.courses ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.courses li {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 12px;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.courses li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.courses li::before {
+    color: #1a3e5e;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#estudios h3 i {
+    color: #1a3e5e;
+    margin-right: 10px;
+}
+
+.courses li i {
+    color: #1a3e5e;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.courses li:hover i {
+    color: #007acc;
+}
+
+@media (max-width: 768px) {
+    #estudios {
+        padding: 20px;
+    }
+}
+
+.contact-info {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin: 15px 50px;
+    font-size: 16px;
+}
+
+.contact-info p i {
+    margin-right: 15px;
+    color: #023864;
+}
+
+.contact-info a {
+    color: #1180db;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+    }
+    .caption {
+      position: absolute;
+      left: 0%;
+      top: 30%;
+      width: 100%;
+      text-align: center;
+      color: #000;
+    }
+    .caption img {
+      width: 200px; /* Ajusta el tamaño según lo necesario */
+      height: 200px; /* Asegúrate de que sea igual al ancho */
+      border-radius: 50%; /* Convierte la imagen en un círculo */
+      border: 2px solid #00294a; /* Borde con color */
+      overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+      box-shadow: 0 14px 18px rgba(0, 0, 0, 0.6); /* Sombra para darle un efecto moderno */
+      object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+    }
+
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        margin-top: 50px;
+        overflow-y: auto;
+        height: 450px;
+    }
+    
+    /* Estilo para cada proyecto */
+    .project {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .seccionproyectos {
+        color: #777;
+        background-color:white;
+        text-align:center;
+        padding:15px 15px;
+        text-align: justify;
+    }
+  }
+  
