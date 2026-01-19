@@ -1,16 +1,18 @@
 import './Footer.css';
+import { useLanguage } from '../../context/LanguageContext';
 
 const Footer = () => {
+	const { t } = useLanguage();
 	return (
 		<>
 			<footer className="footer">
 				<div className="encabezado">
-					<h3 className="titulo">Redes Sociales</h3>
-					<p className="subtitulo">Sígueme en redes para estar al tanto de las últimas novedades.</p>
+					<h3 className="titulo">{t('footer.title')}</h3>
+					<p className="subtitulo">{t('footer.subtitle')}</p>
 				</div>
 				<div className="links">
-					<a href="https://www.youtube.com/falconmasters" target="_blank" className="link youtube">
-						YouTube
+					<a href="https://www.youtube.com/@robertosanchez6021" target="_blank" className="link youtube">
+						{t('footer.btn.youtube')}
 						<div className="icono">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +25,8 @@ const Footer = () => {
 							</svg>
 						</div>
 					</a>
-					<a href="https://www.youtube.com/falconmasters" target="_blank" className="link linkedin">
-						Linkedin
+					<a href="https://www.linkedin.com/in/roberto-carlos-sanchez-sanchez-a3b44684/" target="_blank" className="link linkedin">
+						{t('footer.btn.linkedin')}
 						<div className="icono">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +40,7 @@ const Footer = () => {
 						</div>
 					</a>
 					<a href="https://www.youtube.com/falconmasters" target="_blank" className="link instagram">
-						Instagram
+						{t('footer.btn.instagram')}
 						<div className="icono">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -51,8 +53,8 @@ const Footer = () => {
 							</svg>
 						</div>
 					</a>
-					<a href="https://www.youtube.com/falconmasters" target="_blank" className="link tiktok">
-						Tiktok
+					<a href="https://www.youtube.com/@robertosanchez6021" target="_blank" className="link tiktok">
+						{t('footer.btn.tiktok')}
 						<div className="icono">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +69,7 @@ const Footer = () => {
 					</a>
 				</div>
 
-				<p className="copyright">© 2025 FalconMasters. Todos los derechos reservados.</p>
+				<p className="copyright">{t('footer.rights')}</p>
 			</footer>
 		</>
 	);

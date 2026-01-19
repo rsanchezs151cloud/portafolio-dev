@@ -1,8 +1,10 @@
 import './Contacto.css';
 
 import { useState } from 'react';
+import { useLanguage } from '../../context/LanguageContext';
 
 const Contacto = () => {
+	const { t } = useLanguage();
 	const [nombre, setNombre] = useState('');
 	const [correo, setCorreo] = useState('');
 	const [mensaje, setMensaje] = useState('');
@@ -34,17 +36,17 @@ const Contacto = () => {
 		const mensajeValido = regEx.mensaje.test(mensaje);
 
 		if (!nombreValido) {
-			setError('Por favor ingresa un nombre valido');
+			setError(t('err.name.invalid'));
 			return;
 		}
 
 		if (!correoValido) {
-			setError('Por favor ingresa un correo valido');
+			setError(t('err.email.invalid'));
 			return;
 		}
 
 		if (!mensajeValido) {
-			setError('Por favor ingresa un mensaje valido');
+			setError(t('err.message.invalid'));
 			return;
 		}
 
@@ -59,8 +61,8 @@ const Contacto = () => {
 		<>
 			<section className="contacto" id="contacto">
 				<div className="encabezado">
-					<h3 className="titulo">Hagamos tu idea una realidad</h3>
-					<p className="subtitulo">Escríbeme y construyamos el negocio de tus sueños.</p>
+					<h3 className="titulo">{t('contact.title')}</h3>
+					<p className="subtitulo">{t('contact.subtitle')}</p>
 				</div>
 				<form
 					action="https://formspree.io/f/xqaawyop"
@@ -69,7 +71,7 @@ const Contacto = () => {
 					onSubmit={handleSubmit}
 				>
 					<div className="grupo-formulario">
-						<label htmlFor="nombre">Nombre</label>
+						<label htmlFor="nombre">{t('contact.name')}</label>
 						<input
 							type="text"
 							name="nombre"
@@ -80,7 +82,7 @@ const Contacto = () => {
 						/>
 					</div>
 					<div className="grupo-formulario">
-						<label htmlFor="correo">Correo</label>
+						<label htmlFor="correo">{t('contact.email')}</label>
 						<input
 							type="text"
 							name="correo"
@@ -91,7 +93,7 @@ const Contacto = () => {
 						/>
 					</div>
 					<div className="grupo-formulario mensaje">
-						<label htmlFor="mensaje">Mensaje</label>
+						<label htmlFor="mensaje">{t('contact.message')}</label>
 						<textarea
 							type="text"
 							name="mensaje"
@@ -109,7 +111,7 @@ const Contacto = () => {
 					<div className="grupo-formulario enviar">
 						<div>
 							<button type="submit" className="boton">
-								Mandar mensaje
+								{t('btn.send.message')}
 								<div className="icono">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"

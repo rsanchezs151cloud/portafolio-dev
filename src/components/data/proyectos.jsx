@@ -3,34 +3,28 @@ const proyectos = [
 		id: 1,
 		categoria: 'diseño-web',
 		thumb: {
-			url: './assets/proyectos/diseño-1.png',
+			url: './assets/proyectos/sistema-rh.jpg',
 			alt: 'Trabajo 1',
 		},
 		info: {
-			nombre: 'Nexa Sys',
+			nombre: 'Reingeniería sistema de RH',
 			categoria: 'Diseño Web',
 			contenido: (
 				<>
 					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
-						Nihil quo beatae aut. Qui nam enim blanditiis obcaecati natus aliquid, rem facilis amet dolore
-						officiis provident?
+						Se realizo una reingenieria de un sistema para contratacion de cuidadores (bebes, gente adulta, etc.), se migro la base de datos y se creo toda la parte del backend, se realizo la instalación de 0 de todo el ambiente, serividores web, base de datos y permisos.
+					</p>
+
+					<img loading="lazy" src="./assets/proyectos/sofware-dev-1.png" alt="" />
+
+					<p>
+						* .net core, c#, patron repositorio, GIT, MySQL, Linux, Apache tomcat, Nginx, Letscript.
 					</p>
 
 					<img loading="lazy" src="./assets/proyectos/2.png" alt="" />
 
 					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
-						Nihil quo beatae aut. Qui nam enim blanditiis obcaecati natus aliquid, rem facilis amet dolore
-						officiis provident?
-					</p>
-
-					<img loading="lazy" src="./assets/proyectos/3.png" alt="" />
-
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas iste doloribus saepe voluptatem.
-						Nihil quo beatae aut. Qui nam enim blanditiis obcaecati natus aliquid, rem facilis amet dolore
-						officiis provident?
+						Mi rol principal fue como desarrollador backend, trabajando en conjunto con el equipo de frontend y diseño para lograr una mejor experiencia de usuario, asi como la implementación del proyecto en servidore VPS.
 					</p>
 				</>
 			),

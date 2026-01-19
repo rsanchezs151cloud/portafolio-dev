@@ -1,8 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import './Header.css';
 import DarkModeSwitch from '../DarkModeSwitch';
+import LanguageSwitcher from '../LanguageSwitcher';
+import { useLanguage } from '../../context/LanguageContext';
 
 const Header = () => {
+
+    const { t } = useLanguage();
+  
+
     const headerRef = useRef(null);
     const [isFixed, setIsFixed] = useState(false);
     const [active, setActive] = useState('');
@@ -38,7 +44,7 @@ const Header = () => {
                 });
             },
             {
-                rootMargin: '-140px 0px -60% 0px',
+                rootMargin: '-160px 0px -60% 0px',
                 threshold: 0.2
             }
         );
@@ -61,8 +67,7 @@ const Header = () => {
         const y =
             target.getBoundingClientRect().top +
             window.pageYOffset -
-            headerHeight -
-            20;
+            headerHeight - 10;
 
         window.scrollTo({
             top: y,
@@ -77,8 +82,8 @@ const Header = () => {
         >
             <div className="header-inner">
                 <div className="logo">
-                    <h2 className="titulo">Roberto C. Sánchez</h2>
-                    <p className="subtitulo">Lider de proyectos, Desarrollador Fullstack & Freelance</p>
+                    <h2 className="titulo">{t("name")}</h2>
+                    <p className="subtitulo">{t("nav.subtitle")}</p>
                 </div>
 
                 <nav className="navbar">
@@ -87,39 +92,43 @@ const Header = () => {
                         onClick={handleNavClick}
                         className={active === 'hero' ? 'active' : ''}
                     >
-                        inicio
+                        {t("nav.home")}
                     </a>
                     <a
                         href="#clientes"
                         onClick={handleNavClick}
                         className={active === 'clientes' ? 'active' : ''}
                     >
-                        Clientes
+                        {t("nav.jobs")}
                     </a>
                      <a
                         href="#proyectos"
                         onClick={handleNavClick}
                         className={active === 'proyectos' ? 'active' : ''}
                     >
-                        Proyectos
+                        {t("nav.projects")}
                     </a>
                     <a
                         href="#acerca-de"
                         onClick={handleNavClick}
                         className={active === 'acerca-de' ? 'active' : ''}
                     >
-                        Acerca de
+                        {t("nav.about")}
                     </a>
                     <a
                         href="#contacto"
                         onClick={handleNavClick}
                         className={active === 'contacto' ? 'active' : ''}
                     >
-                        Contacto
+                        {t("nav.contact")}
                     </a>
                 </nav>
+                <div className="toolbar">
+                    <LanguageSwitcher />
+                    <DarkModeSwitch />
+                </div>
 
-                <DarkModeSwitch />
+                
             </div>
         </header>
     );

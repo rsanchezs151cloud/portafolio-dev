@@ -1,19 +1,21 @@
 import './Hero.css';
+import { useLanguage } from '../../context/LanguageContext';
 
-const Hero = () => (
+const Hero = () => {
+ const { t } = useLanguage();
+	return (
 	<>
 		<section className="hero" id="hero">
 			<div className="contenido">
 				<h3 className="titulo">
-					<span>Hola!</span>Soy Roberto Sánchez
+					<span>Hola!</span>Soy {t("name")}
 				</h3>
 				<p className="subtitulo">
-					Ingeniero en sistemas, Full Stack Developer, Freelancer con <br />
-					mas de 19 años de experiencia.
+					{t("hero.subtitle")}
 				</p>
 				<div className="botones">
-					<a href="#trabajos" className="boton transparente">
-						Ver Trabajos
+					<a href="#proyectos" className="boton transparente">
+						{t("hero.projects")}
 						<div className="icono">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +32,7 @@ const Hero = () => (
 					</a>
 
 					<a href="#contacto" className="boton">
-						Mandame un mensaje
+						{t("btn.send.message")}
 						<div className="icono">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -53,5 +55,5 @@ const Hero = () => (
 		</section>
 	</>
 );
-
+}
 export default Hero;

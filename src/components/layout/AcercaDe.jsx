@@ -1,29 +1,27 @@
 import './AcercaDe.css';
-
+import { useLanguage } from '../../context/LanguageContext';
 const AcercaDe = () => {
+	const { t } = useLanguage();
 	return (
 		<>
 			<section className="acerca-de" id="acerca-de">
 				<div className="grid">
 					<div className="col-1">
 						<div className="fotos">
-							<img src="./assets/acerca-de-1.png" className="foto" alt="" />
-							<img src="./assets/acerca-de-2.png" className="foto" alt="" />
+							<img src="./assets/2.jpg" className="foto" alt="" />
+							<img src="./assets/4.png" className="foto" alt="" />
 						</div>
 					</div>
 					<div className="col-2">
-						<h4 className="pre-titulo">Acerca de mí</h4>
-						<h3 className="titulo">La razón por la que deberías contratarme</h3>
+						<h4 className="pre-titulo">{t("about.pretitle")}</h4>
+						<h3 className="titulo">{t("about.title")}</h3>
 						<p className="resumen">
-							Hola! Soy Carlos Arturo, un apasionado freelancer dedicado a convertir ideas en realidades.
-							Con un enfoque creativo y minucioso, transformo proyectos en experiencias únicas.
+							{t("about.resume")}
 							<br />
-							Mi objetivo es superar tus expectativas en cada colaboración, brindando soluciones que
-							perduren. Con 10 años de experiencia en desarrollo web, estoy listo para llevar tu proyecto
-							al siguiente nivel. ¡Trabajemos juntos para lograr algo extraordinario!"
+							{t("about.resume.complement")}
 						</p>
 						<a href="#contacto" className="boton">
-							Mandame un mensaje
+							{t("btn.send.message")}
 							<span className="icono">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"

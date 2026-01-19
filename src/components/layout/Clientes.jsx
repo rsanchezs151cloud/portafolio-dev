@@ -1,25 +1,27 @@
 import { useState } from "react";
 import "./Clientes.css";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Clientes = () => {
+  const { t } = useLanguage();
   const [stopScroll, setStopScroll] = useState(false);
 
 
   const cardData = [
     {
-      title: "Tata Consultancy Services",
+      title: "Tata Consultancy Services.",
       image: "./assets/logos/TCS.svg",
     },
     {
-      title: "Design Your Digital Future",
+      title: "Grupo Salinas.",
       image: "./assets/logos/grupo-salinas.webp",
     },
     {
-      title: "Build with Passion, Ship with Pride",
+      title: "Servicios empresariales Zimag.",
       image: "./assets/logos/Zimag.jpg",
     },
     {
-      title: "Think Big, Code Smart",
+      title: "Freelance.",
       image: "./assets/logos/freelance.jpeg",
     },
   ];
@@ -27,9 +29,9 @@ const Clientes = () => {
   return (
     <section className="clientes" id="clientes">
         <div className="encabezado">
-                <h3 className="titulo">Mis empleos</h3>
+                <h3 className="titulo">{t("customers.title")}</h3>
                 <p className="subtitulo">
-                    Estas empresas han confiado en mis servicios como profesional en sistemas.
+                  {t("customers.subtitle")}
                 </p>
             </div>
     <div

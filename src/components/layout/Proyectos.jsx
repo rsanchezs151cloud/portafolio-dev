@@ -2,8 +2,10 @@ import './Proyectos.css';
 import Modal from '../Modal';
 import proyectos from '../data/proyectos';
 import { useState } from 'react';
+import { useLanguage } from '../../context/LanguageContext';
 
 const Proyectos = () => {
+	const { t } = useLanguage();
 	const [categoriaSelecionada, setCategoriaSelecionada] = useState('todos');
 	const [proyectosFiltrados, setProyectosFiltrados] = useState(proyectos);
 	const [estadoModal, setEstadoModal] = useState(false);
@@ -21,6 +23,7 @@ const Proyectos = () => {
 					return true;
 				}
 			});
+			console.log(nuevosProyecto);
 			setProyectosFiltrados(nuevosProyecto);
 		}
 	};
@@ -47,8 +50,8 @@ const Proyectos = () => {
 		<>
 			<section className="proyectos" id="proyectos">
 				<div className="encabezado">
-					<h3 className="titulo">Mis proyectos</h3>
-					<p className="subtitulo">Estos son mis trabajos como freelance.</p>
+					<h3 className="titulo">{t("projects.title")}</h3>
+					<p className="subtitulo">{t("projects.subtitle")}</p>
 				</div>
 				<div className="filtros">
 					<label htmlFor="todos">
@@ -59,7 +62,7 @@ const Proyectos = () => {
 							onChange={handleChange}
 							checked={categoriaSelecionada === 'todos'}
 						/>
-						<span className="opcion">Todos</span>
+						<span className="opcion">{t("projects.btn.all")}</span>
 					</label>
 					<label htmlFor="diseño-web">
 						<input
@@ -69,7 +72,7 @@ const Proyectos = () => {
 							onChange={handleChange}
 							checked={categoriaSelecionada === 'diseño-web'}
 						/>
-						<span className="opcion">Diseño Web</span>
+						<span className="opcion">{t("projects.btn.web")}</span>
 					</label>
 					<label htmlFor="desarrollo-web">
 						<input
@@ -79,7 +82,7 @@ const Proyectos = () => {
 							onChange={handleChange}
 							checked={categoriaSelecionada === 'desarrollo-web'}
 						/>
-						<span className="opcion">Desarrollo Web</span>
+						<span className="opcion">{t("projects.btn.mobile")}</span>
 					</label>
 					<label htmlFor="aplicaciones-moviles">
 						<input
@@ -89,7 +92,7 @@ const Proyectos = () => {
 							onChange={handleChange}
 							checked={categoriaSelecionada === 'aplicaciones-moviles'}
 						/>
-						<span className="opcion">Aplicaciones Moviles</span>
+						<span className="opcion">{t("projects.btn.desktop")}</span>
 					</label>
 					<label htmlFor="desarrollo-software">
 						<input
@@ -99,7 +102,7 @@ const Proyectos = () => {
 							onChange={handleChange}
 							checked={categoriaSelecionada === 'desarrollo-software'}
 						/>
-						<span className="opcion">Desarrollo de Software</span>
+						<span className="opcion">{t("projects.btn.others")}</span>
 					</label>
 				</div>
 				<div className="grid">

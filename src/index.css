@@ -176,3 +176,43 @@ section {
 html {
   scroll-behavior: smooth;
 }
+
+/* ===============================
+   Botón idioma (FIX DEFINITIVO)
+=============================== */
+
+.lang-button {
+  height: 34px;
+  padding: 0 14px;
+
+  border-radius: 999px;
+  border: none;
+
+  background-color: var(--shade-2);
+  color: var(--shade-8);
+
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.25s ease;
+}
+
+.lang-button:hover {
+  background-color: var(--shade-3);
+}
+
+/* Dark mode */
+body.dark .lang-button {
+  background-color: var(--shade-7);
+  color: var(--shade-2);
+}
+
+body.dark .lang-button:hover {
+  background-color: var(--shade-6);
+}
+

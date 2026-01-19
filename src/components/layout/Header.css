@@ -128,3 +128,49 @@
         flex-wrap: wrap;
     }
 }
+
+
+/* ===============================
+   Idioma + DarkMode alineados
+=============================== */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Botón de idioma adaptado al toggle */
+.toolbar .icon-button {
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 100px;
+
+  background: var(--shade-2);
+  border: none;
+  color: var(--shade-8);
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.toolbar .icon-button:hover {
+  background: var(--shade-3);
+  transform: none;
+}
+
+/* Dark mode ya existente */
+.toolbar .dark-mode {
+  height: 34px;
+}
+
+/* Dark mode */
+body.dark .toolbar .icon-button {
+  background: var(--shade-7);
+  color: var(--shade-2);
+}
+
+body.dark .toolbar .icon-button:hover {
+  background: var(--shade-6);
+}
+
